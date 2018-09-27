@@ -442,7 +442,7 @@ input[type=submit]:focus {
 	background: url(../images/dd111.jpg) scroll no-repeat top left;
 	background-size: cover;	
 	width: 100%;
-	height: auto;
+	height: 50%;
 	justify-content: center;
 	padding-left: 20%;
 	
