@@ -58,18 +58,7 @@ img {
 }
 
 
-header h1 {
-/*	font: 15vmin 'Passion One', bold;*/
-		font: 12vmin 'Varela';
 
-	
-	color: white;
-	text-align: center;
-	text-shadow: 0px 0px 10px rgba(0,0,0,1);
-	display: block;
-	width: 100%;
-	animation: bounceInDown 1s;
-}
 
 /* header h2 */
 #typed_div {
@@ -99,15 +88,54 @@ header h1 {
 	text-shadow: none;
 }
 
+header h1 {
+/*	font: 15vmin 'Passion One', bold;*/
+		font: 12vmin 'Varela';
+
+	
+	color: white;
+	text-align: center;
+	text-shadow: 0px 0px 10px rgba(0,0,0,1);
+	display: block;
+	width: 100%;
+	animation: bounceInDown 1s;
+}
+
 .headp {
 	display: block;
 	width: 100%;
-	position: absolute;
 	text-align: center;
 	bottom: 0;
 	font: 4vmin 'Varela';
 	margin-top: 20px;
 	color: white;
+	opacity: 0;
+	animation: fadeIn 1s 1s forwards;
+}
+.headp2 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	font: 6vmin 'Varela';
+	margin-top: 5px;
+	color: white;
+	opacity: 0;
+	animation: fadeIn 1s 1s forwards;
+	
+
+}
+
+.headp2 a:link, .headp a:visited {
+	color: white;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-top: 0;
+}
+
+
+.headp2 a:hover i {
+	animation: spin 0.3s linear;
 }
 
 #headdiv {
@@ -428,10 +456,12 @@ input[type=submit]:focus {
 
 
 
+/*
 #s1_container {
+	display: flex;
 	position: relative;
 	padding: 10px;
-	transition: margin-left 0.5s;
+	margin-left: 0;
 	margin-right: 0;
 	font-family: consolas, serif;
 	color: darkgray;
@@ -440,37 +470,23 @@ input[type=submit]:focus {
 	
 
 	background: url(../images/dd111.jpg) scroll no-repeat top left;
-	background-size: cover;	
+	background-size: contain;
+	
 	width: 100%;
-	height: 50%;
+	height: 412px;
 	justify-content: center;
-	padding-left: 20%;
-	
-	
 	
 	
 }
-
-#s2_container {
-	background: url(../images/bg2.jpg) fixed no-repeat bottom center;
-	background-size: cover;
-	width: 100%;
-	height: 80%;
-	justify-content: center;
-	padding-top: 50px;
-	position: static;
-
-	
-		
-
-}
+*/
 
 
 
 
-.second_p {
-	columns: 2;
-	column-rule: 1px solid lightgray;
+
+
+#s1_container hgroup {
+	position: absolute;	
 }
 
 #s1_container hgroup h1 {
@@ -490,16 +506,6 @@ input[type=submit]:focus {
 
 	
 }
-/*
-#s1_container img {
-margin: auto;
-margin-bottom: 20px;
-}
-#s1_container img:hover {
-	filter: blur(1px);
-}
-*/
-
 
 
 
@@ -513,7 +519,7 @@ margin-bottom: 20px;
 
 #s1_container hgroup h2 span {
 		margin-left: 10px;
-	border-left: 1px solid black;
+		border-left: 1px solid black;
 	
 	
 	color: slategray;
@@ -524,20 +530,21 @@ margin-bottom: 20px;
 
 
 
-
-.extra_pages {
+#s2_container {
+	background: url(../images/bg2.jpg) fixed no-repeat bottom center;
+	background-size: cover;
 	width: 100%;
-	display: block;
+	height: 80%;
+	justify-content: center;
+	padding-top: 50px;
+	position: static;
 
-	background-color: rgba(10, 10, 10, 1);
-	color: white;
+	
+		
 
-
-	margin-top: 10px;
-	padding: 10px;
-
-	box-shadow: 0px -4px 3px rgba(10, 10, 10, 0.90);
 }
+
+
 
 
 footer {
@@ -631,8 +638,36 @@ footer p b {
 
 
 
-@media all and (min-width: 500px) {
+@media all and (min-width: 1300px) {
 
+	
+/*
+	
+	MEDIAAAAAAAAAA
+	#s1_container {
+		display: flex;
+		position: relative;
+		padding: 10px;
+		margin-left: 0;
+		margin-right: 0;
+		font-family: consolas, serif;
+		color: darkgray;
+		margin-right: auto;
+		margin-left: auto;
+
+
+		background: url(../images/dd111.jpg) scroll no-repeat top left;
+		background-size: cover;
+
+		width: 100%;
+		height: 412px;
+		justify-content: center;
+
+
+	}
+*/
+
+	
 	#icon_container {
 	display: block;
 
@@ -653,16 +688,6 @@ footer p b {
 		padding-bottom: 5px;
 	}
 
-
-/*
-	#scrollgif {
-	max-width: 50px;
-	max-height: 50px;
-	position: absolute;
-	bottom: -10px;
-	margin-right: 10px;
-	}
-*/
 
 	nav {
 		height: auto;
@@ -758,32 +783,6 @@ footer p b {
 }
 
 
-
-
-/*.nav_menu  {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  overflow: hidden;
-}
-.nav_menu:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: red;
-  height: 4px;
-  transform: translateY(4px);
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-}
-
-*/
 
 
 
